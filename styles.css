@@ -1,0 +1,109 @@
+
+*
+{
+    margin: 0px;
+    
+}
+#Title
+{
+    font-size: 40px;
+    font-weight: bold;
+}
+.Header
+{
+   display: flex;
+
+   gap: 10px;
+   background-color: #060130;
+   font-size: 25px;
+   padding: 30px;
+   color: white;
+
+}
+.Links
+{
+    margin-left: auto;
+    display:flex;
+    gap:20px;
+  
+    
+}
+a 
+{
+    text-decoration: none;
+    margin-right: auto;
+    color: white;
+}
+a:hover
+{
+    color: magenta;
+}
+.Main
+{
+    background-color: #060130;
+    padding: 40px;
+}
+image
+{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.body-text
+{
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-size: 30px;
+
+}
+.login
+{
+    display: flex;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: magenta;
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid white;
+    cursor: pointer;
+    }
+    .login:hover
+    {
+        background-color: #060130;
+    }
+#button-login
+{
+    padding: 20px;
+    
+}
+.Footer
+{
+    display: flex;
+    background-color: #060130;
+    margin-top: auto;
+    justify-content: center;
+    align-content: end;
+    color:white;
+    padding-top:155px;
+    padding-bottom: 10px;
+}
+#welcome
+{
+    display: flex;
+}
