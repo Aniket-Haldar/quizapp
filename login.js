@@ -1,91 +1,92 @@
-// Firebase configuration
+// Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyAOd151uKEYs9n4PVWINFy-VVwrxkI65Cs",
     authDomain: "quizweb-7f061.firebaseapp.com",
     projectId: "quizweb-7f061",
-    storageBucket: "quizweb-7f061.appspot.com",
+    storageBucket: "quizweb-7f061.firebasestorage.app",
     messagingSenderId: "1:934899932881:web:ce062fbaa6ae4672512ff0",
     appId: "G-52QB20WC8Z"
 };
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+// Initialize variables
 const auth = firebase.auth();
 const database = firebase.database();
 
-// Register Function
+// Register Function (No Changes)
 function register() {
+    // Get input fields
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     let full_name = document.getElementById('full_name').value;
-
-    // Validate input
+    
+    // Validate input fields
     if (!validate_email(email) || !validate_password(password)) {
-        alert('Email or Password is Invalid!');
+        alert('Email or Password is invalid!');
         return;
     }
     if (!validate_field(full_name)) {
-        alert('Please enter your full name!');
+        alert('Name field cannot be empty!');
         return;
     }
 
-    // Create user in Firebase
+    // Register User
     auth.createUserWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            let user = userCredential.user;
-            let database_ref = database.ref();
+        .then(function() {
+            var user = auth.currentUser;
+            var database_ref = database.ref();
 
-            let user_data = {
+            // Create User Data
+            var user_data = {
                 email: email,
                 full_name: full_name,
                 last_login: Date.now()
             };
 
+            // Store User Data in Firebase
             database_ref.child('users/' + user.uid).set(user_data);
-            alert('User Created! Redirecting...');
-            
-            // Redirect to play.html after successful registration
-            window.location.href = "play.html";
+            alert('User Created Successfully!');
         })
-        .catch((error) => {
+        .catch(function(error) {
             alert(error.message);
         });
 }
 
-// Login Function
+// Login Function (Redirect to play.html)
 function login() {
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
 
-    // Validate input
+    // Validate input fields
     if (!validate_email(email) || !validate_password(password)) {
-        alert('Email or Password is Invalid!');
+        alert('Email or Password is invalid!');
         return;
     }
 
     auth.signInWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            let user = userCredential.user;
-            let database_ref = database.ref();
+        .then(function() {
+            var user = auth.currentUser;
+            var database_ref = database.ref();
 
-            let user_data = {
-                last_login: Date.now()
-            };
-
+            // Update last login time
+            var user_data = { last_login: Date.now() };
             database_ref.child('users/' + user.uid).update(user_data);
-            alert('User Logged In! Redirecting...');
 
-            // Redirect to play.htm after successful login
+            alert('User Logged In Successfully!');
+            
+            // Redirect to play.html after successful login
             window.location.href = "play.html";
         })
-        .catch((error) => {
+        .catch(function(error) {
             alert(error.message);
         });
 }
 
 // Validation Functions
 function validate_email(email) {
-    let expression = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    let expression = /^[^@]+@\w+(\.\w+)+\w$/;
     return expression.test(email);
 }
 
@@ -94,5 +95,5 @@ function validate_password(password) {
 }
 
 function validate_field(field) {
-    return field && field.trim().length > 0;
+    return field != null && field.length > 0;
 }

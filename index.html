@@ -1,47 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login + Firebase Database</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
-
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizApp</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="content_container">
-        <div id="form_container">
-            <div id="form_header_container">
-                <h2 id="form_header">Login + Firebase Database</h2>
-            </div>
-            <div id="form_content_container">
-                <div id="form_content_inner_container">
-                    <form onsubmit="return false;">
-                        <input type="text" id="full_name" placeholder="Full Name" required>
-                        <input type="email" id="email" placeholder="Email" required>
-                        <input type="password" id="password" placeholder="New Password" required>
-                       
-                        <div id="button_container">
-                            <button type="button" onclick="login()">Login</button>
-                            <button type="button" onclick="register()">Register</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+    <div class="Header">
+        <div id="Title">MindMaze</div>
+        <div class="Links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Me</a>
+        </div>
+
+
+    </div>
+    <div class="Main">
+        <div class="image"><img src=quizlogo.jpeg height="400px" width="400px" alt="Quiz App Logo" class="img"></div>
+        <div class="body-text">
+        <div>MindMaze</div>
+        <div id="welcome">Welcome to MindMaze, a Quiz Game for your entertainment</div>
+        <div id=button-login><a href=login.html><button class="login">Login</button></a></div>
         </div>
     </div>
-
-    <!-- Firebase SDKs -->
-    <script defer src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-
-    <!-- Custom JavaScript -->
-    <script defer src="login.js"></script>
+    <div class="Footer">
+        <div>Aniket_Haldar</div>
+    </div>
+    
+    
 </body>
 </html>
