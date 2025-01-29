@@ -1,10 +1,10 @@
-#This is a QuizApp created by HTML CSS and JS// Firebase configuration
+// Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyAOd151uKEYs9n4PVWINFy-VVwrxkI65Cs",
     authDomain: "quizweb-7f061.firebaseapp.com",
     projectId: "quizweb-7f061",
     storageBucket: "quizweb-7f061.appspot.com",
-    messagingSenderId: "934899932881",
+    messagingSenderId: "1:934899932881:web:ce062fbaa6ae4672512ff0",
     appId: "G-52QB20WC8Z"
 };
 
@@ -18,7 +18,6 @@ function register() {
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     let full_name = document.getElementById('full_name').value;
-    
 
     // Validate input
     if (!validate_email(email) || !validate_password(password)) {
@@ -26,7 +25,7 @@ function register() {
         return;
     }
     if (!validate_field(full_name)) {
-        alert('All fields must be filled out!');
+        alert('Please enter your full name!');
         return;
     }
 
@@ -39,12 +38,14 @@ function register() {
             let user_data = {
                 email: email,
                 full_name: full_name,
-                
                 last_login: Date.now()
             };
 
             database_ref.child('users/' + user.uid).set(user_data);
-            alert('User Created!');
+            alert('User Created! Redirecting...');
+            
+            // Redirect to play.html after successful registration
+            window.location.href = "play.html";
         })
         .catch((error) => {
             alert(error.message);
@@ -72,7 +73,10 @@ function login() {
             };
 
             database_ref.child('users/' + user.uid).update(user_data);
-            alert('User Logged In!');
+            alert('User Logged In! Redirecting...');
+
+            // Redirect to play.htm after successful login
+            window.location.href = "play.html";
         })
         .catch((error) => {
             alert(error.message);
