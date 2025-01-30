@@ -1,52 +1,73 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Login + Register</title>
-         <!-- Cool Google Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
-        <!-- Our stylesheet -->
-        <link rel="stylesheet" type="text/css" href="login.css">
-    </head>
-    <body>
-        <div id="content_container">
-            <div id="form_container">
-                <div id="form_header_container">
-                    <h2 id="form_header"> Login + Register </h2>
-                </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindMaze - Login/Register</title>
+    <link rel="stylesheet" href="login.css">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&family=Bowlby+One+SC&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+   
+    <header class="header">
+        <div class="logo-container">
+            <img src="quizlogo.png" alt="MindMaze Logo" class="logo-img">
+        </div>
+    </header>
 
-                <div id="form_content_container">
-                    <div id="form_content_inner_container">
-                        <input type="text" id="full_name" placeholder="Full name">
-                        <input type="email" id="email" placeholder="Email">
-                        <input type="password" id="password" placeholder="New Password">
+    
+    <div id="content_container">
+        <div id="form_container">
+            <div id="form_header_container">
+                <h2 id="form_header"> Register to Play!</h2>
+            </div>
 
-                        
+            <div id="form_content_container">
+                <div id="form_content_inner_container">
+                    <input type="text" id="full_name" placeholder="Full name">
+                    <input type="email" id="email" placeholder="Email">
+                    <input type="password" id="password" placeholder="New Password">
 
-                        <div id="button_container">
-                            <button onclick="login()">Login</button>
-                            <button onclick="register()">Register</button>
-                        </div>
-
+                    <div id="button_container">
+                        <button class="auth-btn" onclick="login()">Login</button>
+                        <button class="auth-btn" onclick="register()">Register</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer">@Aniket-Haldar</div>
-    </body>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    </div>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>MindMaze is a quiz game designed to challenge your mind and provide endless entertainment. It is a Quiz about NIT Durgapur.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: aniket.haldar05@gmail.com</p>
+                <p>Phone: +919832393200</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 MindMaze | Created by Aniket_Haldar
+        </div>
+    </footer>
+
+    
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-
-    <!-- Our script must be loaded after firebase references -->
     <script src="login.js"></script>
-
+</body>
 </html>

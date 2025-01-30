@@ -1,110 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-*
-{
-    margin: 0px;
-    overflow: hidden;
-    
-}
-#Title
-{
-    font-size: 40px;
-    font-weight: bold;
-}
-#Header
-{
-   display: flex;
-
-   gap: 10px;
-   background-color: #060130;
-   font-size: 25px;
-   padding: 30px;
-   color: white;
-
-}
-.Links
-{
-    margin-left: auto;
-    display:flex;
-    gap:20px;
-  
-    
-}
-a 
-{
-    text-decoration: none;
-    margin-right: auto;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a2e;
     color: white;
-}
-a:hover
-{
-    color: magenta;
-}
-.Main
-{
-    background-color: #060130;
-    padding: 40px;
-}
-image
-{
+    line-height: 1.6;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-img
-{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-.body-text
-{
-    display: flex;
-    color: white;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    font-size: 30px;
+    min-height: 100vh;
+}
 
-}
-.login
-{
+.Header {
     display: flex;
-    padding: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #16213e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.Header a{
+    text-decoration: none;
+}
+
+#Title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #e94560;
+}
+
+.Links {
+    display: flex;
+    gap: 20px;
+}
+
+.Links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.Links a:hover {
+    color: #e94560;
+}
+
+.Main {
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: magenta;
-    color:white;
+    padding: 50px 10%;
+    background-color: #1a1a2e;
+    flex: 1;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.body-text {
+    text-align: center;
+    margin-left: 50px;
+}
+
+#welcome-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #e94560;
+    margin-bottom: 20px;
+}
+
+#welcome {
     font-size: 20px;
-    font-weight: bold;
-    border: 2px solid white;
+    margin-bottom: 30px;
+}
+
+.login {
+    padding: 10px 30px;
+    background-color: #e94560;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    }
-    .login:hover
-    {
-        background-color: #060130;
-    }
-#button-login
-{
-    padding: 20px;
-    
+    transition: background-color 0.3s ease;
 }
-.Footer
-{
-    display: flex;
-    background-color: #060130;
+
+.login:hover {
+    background-color: #ff6b6b;
+}
+
+.Footer {
+    background-color: #16213e;
+    color: white;
+    padding: 40px 10% 20px;
     margin-top: auto;
-    justify-content: center;
-    align-content: end;
-    color:white;
-    padding-top:155px;
-    padding-bottom: 10px;
 }
-#welcome
-{
+
+.footer-content {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #e94560;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #e94560;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e94560;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .Header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Links {
+        margin-top: 10px;
+    }
+
+    .Main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .body-text {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
 }
