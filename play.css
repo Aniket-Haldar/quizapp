@@ -3,38 +3,43 @@
     Author: Aniket Haldar
 */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:  'sans-serif';
+    font-family: 'Poppins', sans-serif;
+    overflow:auto;
+    overflow-x: hidden;
 }
 
-body{
+body {
     color: #fff;
-    background: #060130;
-    overflow: hidden;
+    
+   
 }
-.main{
+
+.main {
     min-height: 100vh;
     background: url('/Assets/background2.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     pointer-events: auto;
     transition: 2s ease;
+    background-color: #060130;
 }
-.main.active{
+
+.main.active {
     filter: blur(10px);
     pointer-events: none;
 }
 
-/* CSS for header*/
-.header{
-    background: transparent; 
+/* Header */
+.header {
+    background: #16213e;
     position: fixed;
-    top:0;
-    left:0;
-    width:100%;
+    top: 0;
+    left: 0;
+    width: 100%;
     padding: 20px 10%;
     display: flex;
     justify-content: space-between;
@@ -42,17 +47,17 @@ body{
     z-index: 100;
 }
 
-.logo{
+.logo {
     font-size: 32px;
-    color: #fff;
+    color: #e94560;
     text-decoration: none;
     font-weight: 700;
     filter: drop-shadow(0 0 5px #060130);
 }
 
-.navbar a{
+.navbar a {
     font-size: 18px;
-    color:#fff;
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
@@ -60,74 +65,72 @@ body{
 }
 
 .navbar a:hover,
-.navbar a.active{
-    color: magenta;
+.navbar a.active {
+    color: #e94560; /* Red accent color */
 }
 
-/*Css for container (home section)*/
-
-.container{
+/* Home Section */
+.container {
     display: flex;
     height: 100vh;
     width: 200%;
 }
 
-.home{
+.home {
     position: relative;
     left: -50%;
     width: 100%;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-.home-content{
+.home-content {
     max-width: 600px;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.home-content h1{
+.home-content h1 {
     font-size: 78px;
     font-weight: 700;
     text-shadow: 0 0 1px rgba(0, 0, 0, .3);
 }
 
-.home-content p{
+.home-content p {
     font-size: 16px;
     text-align: center;
     text-shadow: 0 0 10px rgba(0, 0, 0, .3);
     margin-bottom: 30px;
 }
 
-.home-content .start-btn{
+.home-content .start-btn {
     width: 190px;
     height: 55px;
-    background: magenta;
+    background: #e94560; /* Red accent color */
     border: 2px solid #fff;
     outline: none;
     border-radius: 10px;
-    box-shadow: 0 0 10px magenta;
+    box-shadow: 0 0 10px #e94560;
     font-size: 18px;
     color: #fff;
     letter-spacing: 1px;
     font-weight: 600;
     cursor: pointer;
+    transition: .3s ease;
 }
 
-.home-content .start-btn:hover{
-    background: transparent;
-    /* background: #060130 */
-    box-shadow: none;
+.home-content .start-btn:hover {
+    background: #ff6b6b; /* Lighter red on hover */
+    box-shadow: 0 0 10px #ff6b6b;
 }
 
-/* css for quiz note section*/
-.popup-info{
+/* Popup Info Section */
+.popup-info {
     position: absolute;
-    top:50%;
-    left:50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%) scale(.9);
     width: 500px;
     background: #fff;
@@ -138,71 +141,69 @@ body{
     transition: .3s ease;
 }
 
-.popup-info.active{
+.popup-info.active {
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
 }
 
-.popup-info h2{
+.popup-info h2 {
     font-size: 50px;
-    color: magenta;
+    color: #e94560; /* Red accent color */
 }
 
-.popup-info .info{
+.popup-info .info {
     display: inline-block;
     font-size: 16px;
-    color:#333;
-    font-weight:500;
-    margin:4px 0 ;
+    color: #333;
+    font-weight: 500;
+    margin: 4px 0;
 }
 
-/* css for buttons exit and continue*/
-.popup-info .btn-group{
+.popup-info .btn-group {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid magenta;
+    border-top: 1px solid #e94560; /* Red accent color */
     margin-top: 10px;
     padding: 15px 0 7px;
 }
 
-.popup-info .btn-group .info-btn{
+.popup-info .btn-group .info-btn {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 130px;
     height: 45px;
-    background: magenta;
-    border: 2px solid magenta;
+    background: #e94560; /* Red accent color */
+    border: 2px solid #e94560;
     outline: none;
     border-radius: 6px;
     text-decoration: none;
     font-size: 16px;
     color: #fff;
-    font-weight: 600px;
-    box-shadow: 0, 0, 10px, rgba(0, 0, 0, .1);
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
     transition: .5s;
 }
 
-.popup-info .btn-group .info-btn:nth-child(1){
+.popup-info .btn-group .info-btn:nth-child(1) {
     background: transparent;
-    color: magenta;
+    color: #e94560; /* Red accent color */
 }
 
-.popup-info .btn-group .info-btn:nth-child(1):hover{
-    background: magenta;
+.popup-info .btn-group .info-btn:nth-child(1):hover {
+    background: #e94560; /* Red accent color */
     color: #fff;
 }
 
-.popup-info .btn-group .info-btn:nth-child(2):hover{
-    background: #681650;
-    border-color: #681650;
+.popup-info .btn-group .info-btn:nth-child(2):hover {
+    background: #ff6b6b; /* Lighter red on hover */
+    border-color: #ff6b6b;
 }
 
-
-/*Css for container (quiz-section)*/
+/* Quiz Section */
 .quiz-section {
     position: relative;
     left: -50%;
@@ -214,18 +215,17 @@ body{
     transition: .8s ease-in-out;
     transition-delay: .25s;
     z-index: 100;
-
 }
 
-.quiz-section.active{
+.quiz-section.active {
     left: 0;
 }
 
-.quiz-section .quiz-box{
+.quiz-section .quiz-box {
     position: relative;
     width: 500px;
     background: transparent;
-    border: 2px solid magenta;
+    border: 2px solid #e94560; /* Red accent color */
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -235,10 +235,9 @@ body{
     transform: scale(.9);
     transition: .3s ease;
     transition-delay: 0s;
-
 }
 
-.quiz-section .quiz-box.active{
+.quiz-section .quiz-box.active {
     opacity: 1;
     pointer-events: auto;
     transform: scale(1);
@@ -246,40 +245,39 @@ body{
     transition-delay: 1s;
 }
 
-.quiz-box h1{
+.quiz-box h1 {
     font-size: 32px;
     text-align: center;
-    background: linear-gradient(45deg, transparent, magenta, transparent);
+    background: linear-gradient(45deg, transparent, #e94560, transparent); /* Red accent color */
     border-radius: 6px;
 }
 
-.quiz-box .quiz-header{
+.quiz-box .quiz-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    border-bottom: 2px solid magenta;
+    border-bottom: 2px solid #e94560; /* Red accent color */
     margin-bottom: 30px;
-
 }
 
-.quiz-header span{
+.quiz-header span {
     font-size: 18px;
     font-weight: 500;
 }
 
-.quiz-header .header-score{
-    background: magenta;
+.quiz-header .header-score {
+    background: #e94560; /* Red accent color */
     border-radius: 3px;
     padding: 7px;
 }
 
-.quiz-box .question-text{
+.quiz-box .question-text {
     font-size: 24px;
     font-weight: 600;
 }
 
-.option-list .option{
+.option-list .option {
     width: 100%;
     padding: 12px;
     background: transparent;
@@ -290,43 +288,42 @@ body{
     cursor: pointer;
 }
 
-.option-list .option:hover{
+.option-list .option:hover {
     background: #060130;
     border-color: #060130;
 }
 
-.option-list .option.correct{
+.option-list .option.correct {
     background: #060130;
     color: #00a63d;
     border-color: #00a63d;
-
 }
 
-.option-list .option.incorrect{
+.option-list .option.incorrect {
     background: #060130;
     color: #a60045;
     border-color: #a60045;
-
 }
 
-.option-list .option.disabled{
+.option-list .option.disabled {
     pointer-events: none;
 }
-.quiz-box .quiz-footer{
+
+.quiz-box .quiz-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 2px solid magenta;
+    border-top: 2px solid #e94560; /* Red accent color */
     padding-top: 20px;
     margin-top: 25px;
 }
 
-.quiz-footer .question-total{
+.quiz-footer .question-total {
     font-size: 16px;
     font-weight: 600;
 }
 
-.quiz-footer .next-btn{
+.quiz-footer .next-btn {
     width: 100px;
     height: 45px;
     background: #060130;
@@ -341,19 +338,19 @@ body{
     transition: .5s;
 }
 
-.quiz-footer .next-btn.active{
+.quiz-footer .next-btn.active {
     pointer-events: auto;
-    background: magenta;
-    border-color:magenta;
+    background: #e94560; /* Red accent color */
+    border-color: #e94560;
     color: #fff;
 }
+
 .quiz-footer .next-btn.active:hover {
-    background: #681650;
-    border-color: #681650;
+    background: #ff6b6b; /* Lighter red on hover */
+    border-color: #ff6b6b;
 }
 
-/* CSS for result box */
-
+/* Result Box */
 .quiz-section .result-box {
     position: absolute;
     top: 50%;
@@ -361,7 +358,7 @@ body{
     transform: translate(-50%, -50%) scale(.9);
     width: 500px;
     background: transparent;
-    border: 2px solid magenta;
+    border: 2px solid #e94560; /* Red accent color */
     border-radius: 6px;
     padding: 20px;
     display: flex;
@@ -372,13 +369,13 @@ body{
     transition: .3s ease;
 }
 
-.quiz-section .result-box.active{
+.quiz-section .result-box.active {
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
 }
 
-.result-box h2{
+.result-box h2 {
     font-size: 52px;
 }
 
@@ -390,19 +387,18 @@ body{
     margin: 20px 0 40px;
 }
 
-.percentage-container .circular-progress{
+.percentage-container .circular-progress {
     position: relative;
     width: 250px;
     height: 250px;
-    background: conic-gradient(magenta 3.6deg, #060130 0deg);
+    background: conic-gradient(#e94560 3.6deg, #060130 0deg); /* Red accent color */
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.percentage-container .circular-progress::before{
+.percentage-container .circular-progress::before {
     content: '';
     position: absolute;
     width: 210px;
@@ -411,7 +407,7 @@ body{
     border-radius: 50%;
 }
 
-.circular-progress .progress-value{
+.circular-progress .progress-value {
     position: relative;
     font-size: 45px;
     font-weight: 600;
@@ -421,17 +417,17 @@ body{
     display: flex;
 }
 
-.percentage-container .score-text{
+.percentage-container .score-text {
     font-size: 26px;
     font-weight: 600;
     margin-top: 20px;
 }
 
-.buttons button{
+.buttons button {
     width: 130px;
     height: 47px;
-    background-color:magenta;
-    border: 2px solid magenta;
+    background-color: #e94560; /* Red accent color */
+    border: 2px solid #e94560;
     outline: none;
     border-radius: 6px;
     font-size: 16px;
@@ -441,8 +437,76 @@ body{
     cursor: pointer;
 }
 
-.buttons button:hover{
-    background: #681650;
-    border-color: #681650;
+.buttons button:hover {
+    background: #ff6b6b; /* Lighter red on hover */
+    border-color: #ff6b6b;
+}
+.Footer {
+    background-color: #16213e;
+    color: white;
+    padding: 40px 10% 20px;
+    margin-top: auto;
+}
 
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #e94560;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #e94560;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e94560;
+    font-size: 14px;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 5%;
+    }
+
+    .footer .social-icons {
+        margin-top: 10px;
+    }
 }

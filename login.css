@@ -13,7 +13,7 @@ body {
     flex-direction: column;
 }
 
-/* Logo Header */
+
 .header {
     padding: 20px 10%;
     text-align: center;
@@ -25,7 +25,7 @@ body {
     margin-bottom: -20px;
 }
 
-/* Form Container */
+
 #content_container {
     flex: 1;
     width: 100%;
@@ -93,7 +93,7 @@ input {
     transform: translateY(-2px);
 }
 
-/* Footer */
+
 .footer {
     background: #16213e;
     padding: 40px 10% 20px;

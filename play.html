@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Game Website</title>
-    <!--Link CSS files-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="play.css">
 </head>
 <body>
@@ -18,12 +18,11 @@
             <nav class="navbar">
                 <a href="index.html" class="active">Home</a>
                 <a href="#">About</a>
-                <a href="#">Contact</a>
+                <a href="#">Contact Me</a>
             </nav>
         </header>
 
-        <!-- Another section for home content -->
-
+        <!-- Quiz Section -->
         <div class="container">
             <section class="quiz-section">
                 <div class="quiz-box">
@@ -35,9 +34,7 @@
 
                     <h2 class="question-text"></h2>
 
-                    <div class="option-list">
-                     
-                    </div> 
+                    <div class="option-list"></div> 
 
                     <div class="quiz-footer">
                         <span class="question-total"></span>
@@ -69,33 +66,50 @@
         </div>
     </main>
 
-    <!-- Division for Quiz guide popup-->
+    <!-- Quiz Guide Popup -->
     <div class="popup-info">
         <h2>Quiz Guide</h2>
         <span class="info">1. You cannot skip any questions.</span>
-        <span class="info">2. Once attempt any question, you cannot go to previous question.</span>
-        <span class="info">3. After one answer is selected, other option will be disabled.</span>
-        <span class="info">4. You will be given total 5 questions.</span>
-        <span class="info">5. Concentrate on your Quiz, Don't try to cheat.</span>
+        <span class="info">2. Once you attempt a question, you cannot go back.</span>
+        <span class="info">3. After selecting an answer, other options will be disabled.</span>
+        <span class="info">4. You will be given a total of 5 questions.</span>
+        <span class="info">5. Focus on your quiz and don’t try to cheat.</span>
 
-
-        <!--Buttons for starting quiz  -->
+        <!-- Buttons for starting quiz -->
         <div class="btn-group">
             <button class="info-btn exit-btn">Exit Quiz</button>
             <a href="#" class="info-btn continue-btn">Continue</a>
         </div>
     </div>
 
-    <!--Link Javascript files-->
-    <script src="script.js"></script>
-    <script src="questions.js"></script>3
-
-    <footer class="footer">
+    <div class="Footer">
         <div class="footer-content">
-            <p>&copy; Aniket-Haldar</p>
-           
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>MindMaze is a quiz game designed to challenge your mind and provide endless entertainment. It is a Quiz about NIT Durgapur.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: aniket.haldar05@gmail.com</p>
+                <p>Phone: +919832393200</p>
+            </div>
         </div>
-    </footer>
-    
+        <div class="footer-bottom">
+            &copy; 2025 MindMaze | Created by Aniket_Haldar
+        </div>
+    </div>
+
+    <!-- Link Javascript files -->
+    <script src="script.js"></script>
+    <script src="questions.js"></script>
+
 </body>
 </html>
