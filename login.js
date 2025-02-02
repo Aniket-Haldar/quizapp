@@ -48,6 +48,7 @@ function register() {
             // Store User Data in Firebase
             database_ref.child('users/' + user.uid).set(user_data);
             alert('User Created Successfully!');
+            window.location.href = "play.html";
         })
         .catch(function(error) {
             alert(error.message);
